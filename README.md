@@ -2,8 +2,6 @@
 
 **Experimental, PDF-only Windows automation** that reads Gmail messages with an exact print command, validates PDF attachments, and submits them to a specifically configured printer.
 
-> **Project status: public source preview (`0.1.0rc1`) — NOT production-ready.** The offline test suite passes, but live Gmail OAuth, Windows Defender, SumatraPDF, physical printing, fresh Windows installation, and manual recovery have **not** been fully qualified. Do not run unattended on a valuable inbox or printer. This source repository is **not** a preapproved Google OAuth application.
-
 ## Features
 
 - A strict subject grammar: `print`, `print 2`, `print 2 copies duplex`, or `print simplex` (case-insensitive). Unexpected instructions do not print.
