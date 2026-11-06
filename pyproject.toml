@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=78,<86"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmail-auto-printer-candidate"
+version = "0.1.0rc1"
+description = "Offline-tested PDF-only Windows candidate; native release gates pending"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "pypdf>=6.10,<7",
+  "google-api-python-client>=2,<3",
+  "google-auth-oauthlib>=1,<2",
+  "google-auth-httplib2>=0.2,<1",
+  "pywin32>=311,<400; sys_platform == 'win32'",
+]
+
+[project.scripts]
+gmail-auto-printer = "main:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.14,<1", "pip-audit>=2,<3"]
+
+[tool.setuptools]
+py-modules = ["main", "config", "offline", "attachment_handler", "state_store", "security_validator", "malware_scanner", "gmail_client", "printer_manager", "exceptions"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

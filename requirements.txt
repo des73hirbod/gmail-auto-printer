@@ -1,0 +1,7 @@
+# Runtime constraints; exact offline parser tested locally: pypdf 6.10.0.
+# Full clean-install resolution and vulnerability audit remain pending.
+pypdf>=6.10,<7
+google-api-python-client>=2,<3
+google-auth-oauthlib>=1,<2
+google-auth-httplib2>=0.2,<1
+pywin32>=311,<400; sys_platform == 'win32'

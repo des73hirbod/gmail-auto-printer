@@ -1,0 +1,18 @@
+# Local configuration only; never commit your edited private configuration or tokens.
+allowed_senders = ["sender@example.invalid"]
+state_dir = "private"
+credentials_file = "private/credentials.json"
+token_file = "private/token.json"
+printer_name = "Your designated test printer"
+sumatra_pdf_path = 'C:\Program Files\SumatraPDF\SumatraPDF.exe'
+# Explicit path from your Windows Defender installation; unavailable scanner blocks printing.
+defender_path = 'C:\Program Files\Windows Defender\MpCmdRun.exe'
+ack_policy = "none"
+enable_malware_scan = true
+max_attachment_size_mb = 10
+max_copies = 10
+copies = 1
+enable_duplex = false
+max_attachments = 100
+poll_interval_seconds = 30
+gmail_query = "is:unread has:attachment -in:trash -in:spam"
